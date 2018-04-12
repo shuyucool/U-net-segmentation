@@ -4,7 +4,7 @@ from keras.optimizers import *
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from data import dataProcess
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"  #指定运行在编号为1的GPU，若没有GPU加速，可以注释掉，其计算会自动运行在CPU上
 
 
 class myUnet(object):
@@ -23,8 +23,8 @@ class myUnet(object):
 
         conv1 = Conv2D(64, 3, activation='relu', padding='same', kernel_initializer='he_normal')(inputs)
         conv1 = Conv2D(64, 3, activation='relu', padding='same', kernel_initializer='he_normal')(conv1)
-        pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
-
+        pool1 = MaxPooling2D(pool_size=(2, 2))(conv1) #pool1=MaxPolong2D()(b)是指张量b作为输入，其他与此类同
+        
         conv2 = Conv2D(128, 3, activation='relu', padding='same', kernel_initializer='he_normal')(pool1)
         conv2 = Conv2D(128, 3, activation='relu', padding='same', kernel_initializer='he_normal')(conv2)
         pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
@@ -82,7 +82,7 @@ class myUnet(object):
         model = self.get_unet()
         print("got unet")
 
-        # 保存的是模型和权重,
+        # 保存的是模型和权重,ModelCheckpoint将会保存训练中得到的最优参数值
         model_checkpoint = ModelCheckpoint('unet.hdf5_1', monitor='loss', verbose=1, save_best_only=True)
         print('Fitting model...')
         model.fit(imgs_train, imgs_mask_train, batch_size=1, epochs=5, verbose=1, shuffle=True,
@@ -91,18 +91,6 @@ class myUnet(object):
         print('predict test data')
         imgs_mask_test = model.predict(imgs_test, batch_size=1, verbose=1)
         np.save('imgs_mask_test_1.npy', imgs_mask_test)
-
-    def test(self):
-        print("loading data")
-        imgs_train, imgs_mask_train, imgs_test = self.load_data()
-        print("loading data done")
-        model = self.get_unet()
-        print("got unet")
-        model.load_weights('./unet.hdf5')
-        print('predict test data')
-        imgs_mask_test = model.predict(imgs_test, batch_size=1, verbose=1)
-        np.save('imgs_mask_test.npy', imgs_mask_test)
-
 
 if __name__ == '__main__':
     myunet = myUnet()
