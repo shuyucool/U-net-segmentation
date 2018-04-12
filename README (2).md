@@ -1,10 +1,8 @@
 # detail of implement unet 
 
-when u get the code and data
+when you get this code and data(the data in the file of data)
 
-**first** u should run the **split_merge_tif.py**, because the meta data train-volume.tid includes 30 tif image, so u should split it. so the test-volume.tif and train-volume.tif is same.
-
-**second** u should run **data.py** it make data augmentation, i first merge the tarin image and the corresponding groundtruth, so we can make train image and label have the same change,  we save the merge data in diretory named merge
+u should run **data.py** it make data augmentation, i first merge the tarin image and the corresponding groundtruth, so we can make train image and label have the same change,  we save the merge data in diretory named merge
 after merge and then make augmentation,u can refer to 
 https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html, we save augmentated image in diretory named aug_merge
 after augmentation we split the merged image to train and label to diretory named in aug_train and aug_label.
