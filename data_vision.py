@@ -17,6 +17,6 @@ imgs_test_predict *= 255
 imgs_test_predict = imgs_test_predict.astype('uint8')
 print(imgs_test.shape, imgs_test_predict.shape)
 
-for i in range(0,222):
+for i in range(0,20):
     cv2.imwrite(path_Con_test_image + "/" + str(i) + "." + "tif", imgs_test[i])  # 保存测试图像
     cv2.imwrite(path_Con_test_lable + "/" + str(i) + "." + "tif", imgs_test_predict[i])  # 保存测试图像的label
