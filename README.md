@@ -22,4 +22,5 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 4：运行`data_vision.py`,可以将测试集及其结果保存成指定的图片格式，并且保存到指定的路径下。（可以根据自己情况选择）
 
 ### 效果展示：
-![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/0%20(2).tif,https://github.com/shuyucool/U-net-segmentation/blob/master/0.tif)
+![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/0%20(2).tif)
+![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/0.tif)
