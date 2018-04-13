@@ -118,7 +118,7 @@ class myAugmentation(object):
 
 class dataProcess(object):
     def __init__(self, out_rows, out_cols, aug_merge_path="data/aug_merge", aug_train_path="data/aug_train",
-                 aug_label_path="data/aug_label", test_path = 'data/Con_test_image', npy_path="data/npydata",
+                 aug_label_path="data/aug_label", test_path = 'data/test', npy_path="data/npydata",
                  img_type="tif"):
         self.out_rows = out_rows
         self.out_cols = out_cols
@@ -130,7 +130,7 @@ class dataProcess(object):
         self.img_type = img_type
 
     def create_train_data(self):
-        # 将增强之后的训练集生成npy         
+        # 将增强之后的训练集生成npy文件         
         i = 0
         print('-' * 30)
         print('creating train image')
@@ -167,7 +167,7 @@ class dataProcess(object):
         
     def create_test_data(self):
 
-        # 测试集生成npy
+        # 测试集生成npy文件
         i = 0
         print('-' * 30)
         print('Creating training images...')
@@ -185,11 +185,10 @@ class dataProcess(object):
             i += 1
         print('loading done', imgdatas.shape)
         np.save(self.npy_path + '/imgs_test.npy', imgdatas)            # 将30张训练集和30张label生成npy数据
-        # np.save(self.npy_path + '/imgs_mask_train.npy', imglabels)
         print('Saving to .npy files done.')
 
     def load_train_data(self):
-        # 读入训练数据包括label_mask(npy格式), 归一化(只减去了均值)
+        # 读入训练数据包括label_mask(npy格式), 归一化(减并去均值)
         print('-' * 30)
         print('load train images...')
         print('-' * 30)
@@ -218,11 +217,11 @@ class dataProcess(object):
 
 
 if __name__ == "__main__":
-    # aug = myAugmentation()
-    # aug.Augmentation()
-    # aug.splitMerge()
+    aug = myAugmentation()
+    aug.Augmentation()
+    aug.splitMerge()
     mydata = dataProcess(512, 512)
-    # mydata.create_train_data()
+    mydata.create_train_data()
     mydata.create_test_data()
     imgs_train, imgs_mask_train = mydata.load_train_data()
     print(imgs_train.shape, imgs_mask_train.shape)
