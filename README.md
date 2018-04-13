@@ -23,6 +23,6 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 
 ### 效果展示：
 <div align="center">
-<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/image/02.png"  height="230" width="200">
-<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/image/0.png" height="230" width="200" >
+<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/02.png"  height="230" width="200">
+<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/0.png" height="230" width="200" >
 </div>
