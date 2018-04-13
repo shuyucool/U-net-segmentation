@@ -24,3 +24,12 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 ### 效果展示：
 ![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/0%20(2).tif)
 ![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/0.tif)
+<div align="center">
+<img src="http://pic15.photophoto.cn/20100615/0006019058815826_b.jpg"  height="330" width="495">
+<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_1_1488499316/550" height="330" width="190" >
+
+<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_2_1488499316/550" height="330" width="190" >
+
+<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_3_1488499316/550" height="330" width="190" >
+
+ </div>
