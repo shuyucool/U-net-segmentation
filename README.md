@@ -5,4 +5,4 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 
 U-net网络结构：
 
-![Image]（https://github.com/shuyucool/U-net-segmentation/blob/master/image/20170517192834805.png）
+![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/image/20170517192834805.png）
