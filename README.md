@@ -9,7 +9,7 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 <img src="https://github.com/shuyucool/U-net-segmentation/blob/master/image/20170517192834805.png">
 
 ## 程序介绍
-   在`ata/train`路径下已经有了`image`,`label`两个文件，分别是训练原始图像和`ground truth`.在以'aug_'开头的文件夹下都有一个`test`文件,这个只是为了测试，可以直接删除。
+   在`data/train`路径下已经有了`image`,`label`两个文件，分别是训练原始图像和`ground truth`.在以'aug_'开头的文件夹下都有一个`test`文件,这个只是为了测试，可以直接删除。
 
 `程序使用说明：`
 -------------
