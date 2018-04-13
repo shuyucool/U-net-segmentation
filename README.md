@@ -5,8 +5,8 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 
 ## U-net网络结构：
 -------------
-
-![Image](https://github.com/shuyucool/U-net-segmentation/blob/master/image/20170517192834805.png)
+<div align="center">
+<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/image/20170517192834805.png"  height="430" width="500">
 
 ## 程序介绍
    在`ata/train`路径下已经有了`image`,`label`两个文件，分别是训练原始图像和`ground truth`.在以'aug_'开头的文件夹下都有一个`test`文件,这个只是为了测试，可以直接删除。
@@ -23,6 +23,6 @@ U-net网络是一个非常强大的分割网络，（其实说它是一个二分
 
 ### 效果展示：
 <div align="center">
-<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/0%20(2).tif"  height="330" width="400">
-<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/0.tif" height="330" width="400" >
+<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/0%20(2).tif"  height="230" width="200">
+<img src="https://github.com/shuyucool/U-net-segmentation/blob/master/0.tif" height="230" width="200" >
 </div>
